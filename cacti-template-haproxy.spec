@@ -4,7 +4,8 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Template for Cacti - HAProxy
 Name:		cacti-template-%{plugin}
-Version:	0.1
+# version from haproxy.pl
+Version:	0.30
 Release:	0.2
 License:	GPL v2
 Group:		Applications/WWW
