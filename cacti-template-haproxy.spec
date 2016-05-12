@@ -1,18 +1,19 @@
 # TODO
 # - enable agent in snmpd
 %define		plugin haproxy
-%include	/usr/lib/rpm/macros.php
+%include	/usr/lib/rpm/macros.perl
 Summary:	Template for Cacti - HAProxy
 Name:		cacti-template-%{plugin}
 Version:	0.1
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		Applications/WWW
 # the templates were last modified Oct 25, 2010, there's no point using newer version tarball
 Source0:	http://www.haproxy.org/download/1.6/src/haproxy-1.6.3.tar.gz
 # Source0-md5:	3362d1e268c78155c2474cb73e7f03f9
+Patch0:		bang.patch
 URL:		https://github.com/haproxy/haproxy/tree/master/contrib/netsnmp-perl
-BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.554
 Requires:	cacti >= 0.8.7e-8
 BuildArch:	noarch
@@ -38,6 +39,7 @@ SNMPd agent to provide HAProxy statistics
 %prep
 %setup -qc
 mv haproxy-*/contrib/netsnmp-perl/* .
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
