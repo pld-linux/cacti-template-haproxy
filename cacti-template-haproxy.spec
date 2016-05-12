@@ -30,6 +30,7 @@ Cacti snmp-query definition for backends.
 %package -n net-snmp-agent-%{plugin}
 Summary:	SNMPd agent to provide HAProxy statistics
 Group:		Networking/Daemons
+Requires:	net-snmp
 
 %description -n net-snmp-agent-%{plugin}
 SNMPd agent to provide HAProxy statistics
