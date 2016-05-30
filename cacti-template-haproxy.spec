@@ -4,7 +4,7 @@ Summary:	Template for Cacti - HAProxy
 Name:		cacti-template-%{plugin}
 # version from haproxy.pl
 Version:	0.30
-Release:	0.6
+Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 # the templates were last modified Oct 25, 2010, there's no point using newer version tarball
