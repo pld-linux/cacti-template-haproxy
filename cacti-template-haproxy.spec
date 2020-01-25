@@ -1,5 +1,4 @@
 %define		plugin haproxy
-%include	/usr/lib/rpm/macros.perl
 Summary:	Template for Cacti - HAProxy
 Name:		cacti-template-%{plugin}
 # version from haproxy.pl
