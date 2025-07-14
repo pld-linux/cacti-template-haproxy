@@ -38,7 +38,7 @@ SNMPd agent to provide HAProxy statistics
 %prep
 %setup -qc
 mv haproxy-*/contrib/netsnmp-perl/* .
-%patch0 -p1
+%patch -P0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
